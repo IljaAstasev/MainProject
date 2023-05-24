@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 19 2023 г., 10:15
+-- Время создания: Май 24 2023 г., 08:29
 -- Версия сервера: 10.4.18-MariaDB
 -- Версия PHP: 7.4.18
 
@@ -40,9 +40,34 @@ CREATE TABLE `goods` (
 --
 
 INSERT INTO `goods` (`id`, `name`, `price`, `description`, `photo`) VALUES
-(1, 'Товар', '50', 'Описание', 'images/back-of-mens-white-shirt_4460x4460.jpg'),
-(2, 'Товар2', '170', 'маввывыаы', 'images/back-of-mens-white-shirt_4460x4460.jpg'),
-(3, 'Товар3', '260', 'аовылда', 'images/back-of-mens-white-shirt_4460x4460.jpg');
+(3, 'Новый товар', '25$', 'Черная майка', 'images/product1.jpg'),
+(4, 'Black T-skirt', '10$', 'Black t-shirt with white words\r\n', 'images/product.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `First_name` varchar(255) NOT NULL,
+  `Second_name` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `password` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `First_name`, `Second_name`, `login`, `password`) VALUES
+(0, 'Ilja', 'Astasev', 'Micro4el', 0),
+(0, 'Ilja', 'Astasev', 'Micro4el', 0),
+(0, 'Ilja', 'Astasev', 'Micro4el', 0),
+(0, 'Ilja', 'Astasev', 'Micro4el', 0),
+(0, 'Ilja', 'Astasev', 'Micro4el', 0),
+(0, '1', '2', '3', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -62,7 +87,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
